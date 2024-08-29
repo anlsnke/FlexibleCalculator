@@ -3,7 +3,7 @@ This project provides a basic arithmetic calculator that supports addition, subt
 It also allows for chained calculations where a series of operations can be applied sequentially.
 It is also extensible so that new operations can be added without modifying the core Calculator class.
 
-IoC is acheived her by delegating all logic to the `Operation` enum. This ensures that the `Calculator` class does not need to be modified while adding new operations.
+IoC is acheived here by delegating all logic to the `Operation` enum. This ensures that the `Calculator` class does not need to be modified while adding new operations.
 
 To add a new operation to the calculator, a new enum and corresponding logic need to be added to `Operation` enum. For example
 ```java
@@ -48,8 +48,8 @@ Number chainResult = calculator.chainCalculate(10, steps);
 System.out.println(chainResult); // Output: 30
 ```
 
-## Test Cases
-All test cases are in CalculatorTest.java
+## Testing
+JUnit test cases are in test/CalculatorTest.java. Please make sure you add the lib folder to your system path so you can run this file. 
 
 ## Assumptions
 1. Since Operation is an enum, there can never be an invalid input to calculate(). So, not going to handle that. If the input could also be a string, then we can validate accordingly and throw an exception for illegal arguments
